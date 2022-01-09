@@ -7,6 +7,8 @@ import { useState, useEffect } from 'react';
 export default function Home() {
 
   const [data, setData] = useState([]);
+  const [cryptoNameInput, setCryptoNameInput] = useState('');
+  const [currencyInput, setCurrencyInput] = useState('');
 
   useEffect(() => {return undefined;});
 
@@ -32,8 +34,8 @@ export default function Home() {
       </Head>
 
       <form>
-        <input type="text" name="cryptoName" placeholder="Crypto Name" value={cryptoName} onChange={(e) => setCryptoName(e.target.value)} />
-        <input type="text" name="currency" placeholder="Currency (usd or cad)" value={currency} onChange={(e) => setCurrency(e.target.value)} />
+        <input type="text" name="cryptoName" placeholder="Crypto Name" value={cryptoNameInput} onChange={(e) => setCryptoNameInput(e.target.value)} />
+        <input type="text" name="currency" placeholder="Currency (usd or cad)" value={currencyInput} onChange={(e) => setCurrencyInput(e.target.value)} />
         <button type="submit" onClick={(e) => addPriceHandler(e, cryptoName, currency)}>Add Price</button>
       </form>
 
