@@ -22,6 +22,7 @@ export default function Home() {
       setData([...data, {cryptoName, price, currency}]);
     } catch (error) {
       console.log(error);
+      alert('Something went wrong. Make sure to enter a valid crypto name (all lowercase) and currency.');
     }
 
     setCryptoNameInput('');
