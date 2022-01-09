@@ -31,7 +31,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      
+      <form>
+        <input type="text" name="cryptoName" placeholder="Crypto Name" value={cryptoName} onChange={(e) => setCryptoName(e.target.value)} />
+        <input type="text" name="currency" placeholder="Currency (usd or cad)" value={currency} onChange={(e) => setCurrency(e.target.value)} />
+      </form>
+
+      {
+        data.map((cryptoObject, index) => {
+          return (
+            <div key={index}>
+              <h1>{cryptoObject.cryptoName}</h1>
+              <h3>{cryptoObject.price}</h3>
+            </div>
+          );
+        })
+      }
     </div>
   )
 }
