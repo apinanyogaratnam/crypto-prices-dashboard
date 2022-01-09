@@ -47,8 +47,8 @@ export default function Home() {
           console.log(index);
           return (
             <div className={styles['currency-container']} key={index}>
-              <h1>{cryptoObject.cryptoName}</h1>
-              <h3>{cryptoObject.price}</h3>
+              <h1 className={styles.spacing}>{cryptoObject.cryptoName}</h1>
+              <h3 className={styles.spacing}>{cryptoObject.price}</h3>
               <h3>{cryptoObject.currency}</h3>
             </div>
           );

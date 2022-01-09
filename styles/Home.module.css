@@ -124,3 +124,7 @@
   border: 1px solid steelblue;
   border-radius: 20px;
 }
+
+.spacing {
+  margin-right: 1rem;
+}
