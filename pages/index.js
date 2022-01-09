@@ -23,6 +23,9 @@ export default function Home() {
     } catch (error) {
       console.log(error);
     }
+
+    setCryptoNameInput('');
+    setCurrencyInput('');
   };
 
   return (
