@@ -34,6 +34,7 @@ export default function Home() {
       <form>
         <input type="text" name="cryptoName" placeholder="Crypto Name" value={cryptoName} onChange={(e) => setCryptoName(e.target.value)} />
         <input type="text" name="currency" placeholder="Currency (usd or cad)" value={currency} onChange={(e) => setCurrency(e.target.value)} />
+        <button type="submit" onClick={(e) => addPriceHandler(e, cryptoName, currency)}>Add Price</button>
       </form>
 
       {
