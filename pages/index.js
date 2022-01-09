@@ -46,7 +46,7 @@ export default function Home() {
         data.map((cryptoObject, index) => {
           console.log(index);
           return (
-            <div key={index}>
+            <div className={styles['currency-container']} key={index}>
               <h1>{cryptoObject.cryptoName}</h1>
               <h3>{cryptoObject.price}</h3>
               <h3>{cryptoObject.currency}</h3>
