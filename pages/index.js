@@ -19,7 +19,7 @@ export default function Home() {
       const response = await axios.get(`https://api.coingecko.com/api/v3/simple/price?ids=${cryptoName}&vs_currencies=${currency}`);
       const price = response.data[cryptoName][currency];
 
-      setData([...data, {cryptoName, price}]);
+      setData([...data, {cryptoName, price, currency}]);
     } catch (error) {
       console.log(error);
     }
@@ -49,6 +49,7 @@ export default function Home() {
             <div key={index}>
               <h1>{cryptoObject.cryptoName}</h1>
               <h3>{cryptoObject.price}</h3>
+              <h3>{cryptoObject.currency}</h3>
             </div>
           );
         })
